@@ -43,7 +43,7 @@ const path = {
         html: srcPath + "**/*.html",
         css: srcPath + "assets/scss/**/*.scss",
         js: srcPath + "assets/js/**/*.js",
-        images: srcPath + "assets/images/**/*.{jpeg,png,svg,ico,webp}",
+        images: srcPath + "assets/images/**/*.{jpeg,png,svg,ico,webp,jpg}",
         fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
     clean: "./" + distPath
@@ -89,7 +89,31 @@ function js() {
         .pipe(dest(path.build.js))
 }
 
+function images() {
+    return src(path.src.images, { base: srcPath + "assets/images/" })
+        .pipe(imagemin([
+            imagemin.gifsicle({ interlaced: true }),
+            imagemin.mozjpeg({ quality: 80, progressive: true }),
+            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.svgo({
+                plugins: [
+                    {
+                        name: 'removeViewBox',
+                        active: true
+                    },
+                    {
+                        name: 'cleanupIDs',
+                        active: false
+                    }
+                ]
+            })
+        ]))
+        .pipe(dest(path.build.images))
+
+}
+
 exports.html = html;
 exports.css = css;
 exports.js = js;
 
+exports.images = images;

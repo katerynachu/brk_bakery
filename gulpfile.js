@@ -16,6 +16,7 @@ const panini = require("panini");
 const rigger = require("gulp-rigger")
 const imagemin = require("gulp-imagemin");
 const del = require("del");
+const notify = require("gulp-notify");
 const browserSync = require('browser-sync').create();
 
 //Paths
@@ -66,7 +67,15 @@ function html() {
 
 function css() {
     return src(path.src.css, { base: srcPath + "assets/scss/" })
-        .pipe(plumber())
+        .pipe(plumber({
+            errorHandler: function (err) {
+                notify.onError({
+                    title: "SCSS ERROR",
+                    message: "Error :<% error.message %>"
+                })(err);
+                this.inherit('end');
+            }
+        }))
         .pipe(sass())
         .pipe(autoprefixer())
         .pipe(cssbeautify())
@@ -89,7 +98,15 @@ function css() {
 
 function js() {
     return src(path.src.js, { base: srcPath + "assets/js/" })
-        .pipe(plumber())
+        .pipe(plumber({
+            errorHandler: function (err) {
+                notify.onError({
+                    title: "JS ERROR",
+                    message: "Error :<% error.message %>"
+                })(err);
+                this.inherit('end');
+            }
+        }))
         .pipe(rigger())
         .pipe(dest(path.build.js))
         .pipe(uglify())

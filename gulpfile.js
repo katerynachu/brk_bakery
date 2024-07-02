@@ -112,6 +112,10 @@ function images() {
 
 }
 
+function fonts() {
+    return src(path.src.fonts, { base: srcPath + "assets/fonts/" })
+
+}
 
 function clean() {
     return del(path.clean)
@@ -119,9 +123,9 @@ function clean() {
 }
 
 
-
 exports.html = html;
 exports.css = css;
 exports.js = js;
 exports.images = images;
+exports.fonts = fonts;
 exports.clean = clean;

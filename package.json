@@ -2,22 +2,30 @@
   "name": "brk_bakery",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp"
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "cssnano": "^5.0.12",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssbeautify": "^1.0.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^5.1.0",
+    "gulp-strip-css-comments": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "panini": "^1.7.1",
+    "sass": "^1.77.6"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/katerynachu/brk_bakery.git"
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp"
   },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/katerynachu/brk_bakery/issues"
-  },
-  "homepage": "https://github.com/katerynachu/brk_bakery#readme",
-  "devDependencies": {
-    "gulp": "^5.0.0"
-  }
+  "license": "ISC"
 }

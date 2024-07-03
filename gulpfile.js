@@ -59,8 +59,14 @@ function localServer() {
 }
 
 function html() {
+    panini.refresh()
     return src(path.src.html, { base: srcPath })
         .pipe(plumber())
+        .pipe(panini({
+            root: srcPath,
+            layouts: srcPath + "templates/layouts",
+            partials: srcPath + "templates/partials"
+        }))
         .pipe(dest(path.build.html))
         .pipe(browserSync.reload({ stream: true }))
 }

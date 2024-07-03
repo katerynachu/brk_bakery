@@ -173,12 +173,12 @@ function watchFiles() {
 const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts))
 const watch = gulp.parallel(build, watchFiles, localServer)
 
-exports.html = html;
-exports.css = css;
-exports.js = js;
-exports.images = images;
-exports.fonts = fonts;
-exports.clean = clean;
+// exports.html = html;
+// exports.css = css;
+// exports.js = js;
+// exports.images = images;
+// exports.fonts = fonts;
+// exports.clean = clean;
 exports.build = build;
 exports.watch = watch;
 

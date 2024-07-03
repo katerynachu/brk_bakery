@@ -16,6 +16,7 @@ const panini = require("panini");
 const rigger = require("gulp-rigger")
 const imagemin = require("gulp-imagemin");
 const del = require("del");
+const sourcemaps = require('gulp-sourcemaps');
 const notify = require("gulp-notify");
 const browserSync = require('browser-sync').create();
 
@@ -72,7 +73,8 @@ function html() {
 }
 
 function css() {
-    return src(path.src.css, { base: srcPath + "assets/scss/" })
+    return src([path.src.css, '!src/assets/scss/**/_*.scss'], { base: srcPath + "assets/scss/" })
+        .pipe(sourcemaps.init())
         .pipe(plumber({
             errorHandler: function (err) {
                 notify.onError({

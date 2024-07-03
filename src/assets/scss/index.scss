@@ -1,6 +1,9 @@
-//comments 
-
-
-body {
-    color: red;
-}
+/**
+STYLES for  main page 
+  |============================
+  | include scss partials with
+  | default @import 'name';
+  |============================
+*/
+@import 'modern-normalize';
+@import 'global';

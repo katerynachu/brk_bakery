@@ -1,6 +1,3 @@
-console.log(2)
-console.log(1)
-
 // BURGER_MENU
 let burgerMenu = document.getElementById('burger-menu');
 

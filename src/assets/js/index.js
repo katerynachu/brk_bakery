@@ -1,2 +1,2 @@
-//= components/script.js
-//= components/script-2.js
+
+//= components/mobile-menu.js

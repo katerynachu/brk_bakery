@@ -490,3 +490,106 @@ img {
     bottom: 50%;
     left: 30%;
 }
+
+@media (max-width: 768px) {
+    .mobile-menu_bg {
+        left: 36%;
+    }
+}
+
+.hero_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: normal;
+}
+
+@media (max-width: 485px) {
+    .hero_wrapper {
+        flex-direction: column-reverse;
+    }
+}
+
+.hero_content {
+    position: relative;
+    background-color: #E7D4BE;
+    padding: 162px 123px 241px 123px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .hero_content {
+        padding: 42px 113px 0 23px;
+    }
+}
+
+@media (max-width: 485px) {
+    .hero_content {
+        padding: 30px 60px;
+    }
+}
+
+.hero_subtext {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 21px;
+}
+
+@media (max-width: 768px) {
+    .hero_subtext {
+        margin-bottom: 18px;
+    }
+}
+
+.hero_title {
+    font-family: "Ultra", serif;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 111%;
+    color: #000;
+    margin-bottom: 27px;
+}
+
+@media (max-width: 768px) {
+    .hero_title {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 485px) {
+    .hero_title {
+        font-size: 38px;
+    }
+}
+
+.hero_description {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .hero_description {
+        font-size: 16px;
+    }
+}
+
+.hero-img_item {
+    max-width: 715px;
+    max-height: auto;
+}
+
+@media (max-width: 768px) {
+    .hero-img_item {
+        max-width: 430px;
+        margin: 0 auto;
+    }
+}

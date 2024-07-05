@@ -23,7 +23,7 @@
     &_menu{
         display: flex;
         gap:20px;
-        @media (max-width: 1051px) {
+        @media (max-width: $desktop) {
             display: none;
         }
     }
@@ -87,7 +87,7 @@
     position: relative;
     z-index: 20;
 
-    @media (min-width: 1051px) {
+    @media (min-width: $desktop) {
         display: none;
     }
 
@@ -172,7 +172,6 @@
     background-color: black;
     bottom: 0;
     left: 0;
-    // transition: 675ms ease-in;
 
     display: flex;
     justify-content: center;
@@ -201,5 +200,11 @@
     position: absolute;
     bottom:50%;
     left:30%;
+
+    @media (max-width: $tablet) {
+        left:36%;
+
+
+        }
 }
 }

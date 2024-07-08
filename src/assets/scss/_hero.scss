@@ -8,6 +8,9 @@
         @media (max-width: $mobile) {
             flex-direction: column-reverse;
         }
+        @media (min-width: 1440px) {
+            justify-content: center;    
+            }
 
     }
     &_content{
@@ -16,6 +19,9 @@
         padding: 162px 123px 241px 123px ; 
         margin: 0 auto;
 
+        @media (min-width: 1440px) {
+            margin: unset;
+            }
         @media (max-width: $tablet) {
         padding: 42px 113px 0 23px ; 
 
@@ -35,7 +41,12 @@
         color: #000;
 
         margin-bottom: 21px;
-
+        &::before{
+            content: url(../images/hero_grain.png);
+            top: -50px;
+            position: absolute;
+            left: 0;
+        }
         @media (max-width: $tablet) {
             margin-bottom: 18px;
             }
@@ -48,15 +59,33 @@
         font-size: 72px;
         line-height: 111%;
         color: #000;
+        width: 467px;
 
+        position: relative;
         margin-bottom: 27px;
-
+        &::after{
+            content: url(../images/hero-black-dots.png);
+            top: -15%;
+            position: absolute;
+            right: 40%;
+        }
 
         @media (max-width: $tablet) {
             font-size: 48px;
+            width: 230px;
+
+            &::after{
+                top: -15%;
+                right: -15%;
+            }
             }
         @media (max-width: $mobile) {
+            width: 320px;
             font-size: 38px;
+            &::after{
+                top: -65%;
+                right: 0;
+            }
 
         }
     }
@@ -67,7 +96,8 @@
         font-size: 20px;
         line-height: 160%;
         color: #000;
-
+        max-width: 470px;
+        
         @media (max-width: $tablet) {
             font-size: 16px;
             }

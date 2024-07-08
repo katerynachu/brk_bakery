@@ -314,6 +314,12 @@ img {
     margin: 0 auto;
 }
 
+@media (min-width: 1440px) {
+    .header_container {
+        max-width: 1440px;
+    }
+}
+
 .header_wrapper {
     display: flex;
     justify-content: space-between;
@@ -380,6 +386,12 @@ img {
 
 .menu_link:hover, .menu_link:focus {
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 1440px) {
+    .menu_link {
+        font-size: 23px;
+    }
 }
 
 .burger-menu {
@@ -510,11 +522,23 @@ img {
     }
 }
 
+@media (min-width: 1440px) {
+    .hero_wrapper {
+        justify-content: center;
+    }
+}
+
 .hero_content {
     position: relative;
     background-color: #E7D4BE;
     padding: 162px 123px 241px 123px;
     margin: 0 auto;
+}
+
+@media (min-width: 1440px) {
+    .hero_content {
+        margin: unset;
+    }
 }
 
 @media (max-width: 768px) {
@@ -540,6 +564,13 @@ img {
     margin-bottom: 21px;
 }
 
+.hero_subtext::before {
+    content: url(../images/hero_grain.png);
+    top: -50px;
+    position: absolute;
+    left: 0;
+}
+
 @media (max-width: 768px) {
     .hero_subtext {
         margin-bottom: 18px;
@@ -553,18 +584,39 @@ img {
     font-size: 72px;
     line-height: 111%;
     color: #000;
+    width: 467px;
+    position: relative;
     margin-bottom: 27px;
+}
+
+.hero_title::after {
+    content: url(../images/hero-black-dots.png);
+    top: -15%;
+    position: absolute;
+    right: 40%;
 }
 
 @media (max-width: 768px) {
     .hero_title {
         font-size: 48px;
+        width: 230px;
+    }
+
+    .hero_title::after {
+        top: -15%;
+        right: -15%;
     }
 }
 
 @media (max-width: 485px) {
     .hero_title {
+        width: 320px;
         font-size: 38px;
+    }
+
+    .hero_title::after {
+        top: -65%;
+        right: 0;
     }
 }
 
@@ -574,6 +626,7 @@ img {
     font-size: 20px;
     line-height: 160%;
     color: #000;
+    max-width: 470px;
 }
 
 @media (max-width: 768px) {

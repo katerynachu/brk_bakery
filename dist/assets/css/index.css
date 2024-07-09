@@ -646,3 +646,50 @@ img {
         margin: 0 auto;
     }
 }
+
+.about-us {
+    padding: 160px 0;
+}
+
+.about-us_container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1440px) {
+    .about-us_container {
+        max-width: 1440px;
+    }
+}
+
+.about-us_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-us_img {
+    width: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 700px;
+    background-image: url(../images//about-orange-bg.png);
+    background-repeat: no-repeat;
+    background-position: 0 192px;
+    position: relative;
+}
+
+.about-us_img::before {
+    content: url(../images/about-bread.png);
+    width: 370px;
+    position: absolute;
+    top: 45px;
+    left: -25px;
+    z-index: 0;
+}
+
+.about-us_img .img_main {
+    z-index: 1;
+}

@@ -1,0 +1,33 @@
+.about-us{
+    padding: 160px 0;
+   
+    &_container{
+        @include container;
+    }
+    &_wrapper{
+        @include wrapper;
+    }
+    &_img{
+        width: 520px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        height: 700px;
+        background-image: url(../images//about-orange-bg.png);
+        background-repeat: no-repeat;
+        background-position: 0 192px;        ;
+        position: relative;
+
+        &::before{
+            content: url(../images/about-bread.png);
+            width: 370px;
+            position: absolute;
+            top: 45px;
+            left: -25px;
+            z-index: 0;
+        }
+        .img_main{
+            z-index: 1;
+        }
+    }
+}

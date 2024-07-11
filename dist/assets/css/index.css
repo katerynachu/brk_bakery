@@ -509,6 +509,10 @@ img {
     }
 }
 
+.hero {
+    background-color: #E7D4BE;
+}
+
 .hero_wrapper {
     display: flex;
     justify-content: space-between;
@@ -530,7 +534,6 @@ img {
 
 .hero_content {
     position: relative;
-    background-color: #E7D4BE;
     padding: 162px 123px 241px 123px;
     margin: 0 auto;
 }
@@ -667,6 +670,8 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-items: start;
+    gap: 52px;
 }
 
 .about-us_img {
@@ -692,4 +697,30 @@ img {
 
 .about-us_img .img_main {
     z-index: 1;
+}
+
+.about-us_content {
+    padding-top: 45px;
+}
+
+.about-us_title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+    color: #171b1b;
+    margin-bottom: 18px;
+}
+
+.about-us_subtitle {
+    font-family: "Ultra", serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 114%;
+    color: #171b1b;
+    text-transform: capitalize;
+    margin-bottom: 59px;
+    max-width: 570px;
 }

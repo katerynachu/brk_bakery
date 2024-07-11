@@ -6,6 +6,8 @@
     }
     &_wrapper{
         @include wrapper;
+        align-items: start;
+        gap:52px;
     }
     &_img{
         width: 520px;
@@ -29,5 +31,29 @@
         .img_main{
             z-index: 1;
         }
+    }
+    &_content{
+        padding-top: 45px;;
+    }
+    &_title{ 
+        font-family: $oswald;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 200%;
+        letter-spacing: 0.19em;
+        text-transform: uppercase;
+        color: #171b1b;
+        margin-bottom: 18px;
+    }
+    &_subtitle{
+        font-family: $ultra;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 114%;
+        color: #171b1b;
+        text-transform: capitalize;
+        margin-bottom: 59px;
+        max-width: 570px;
+
     }
 }

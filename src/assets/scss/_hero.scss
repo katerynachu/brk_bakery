@@ -1,4 +1,5 @@
 .hero{
+    background-color: $beige;
 
     &_wrapper{
         @include wrapper;
@@ -15,7 +16,6 @@
     }
     &_content{
         position: relative;
-        background-color: $beige;
         padding: 162px 123px 241px 123px ; 
         margin: 0 auto;
 

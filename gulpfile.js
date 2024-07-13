@@ -20,6 +20,9 @@ const sourcemaps = require('gulp-sourcemaps');
 const notify = require("gulp-notify");
 const browserSync = require('browser-sync').create();
 
+const babel = require('gulp-babel');
+
+
 //Paths
 
 const srcPath = "src/";
@@ -81,7 +84,7 @@ function css() {
                     title: "SCSS ERROR",
                     message: "Error :<% error.message %>"
                 })(err);
-                this.inherit('end');
+                this.emit('end');
             }
         }))
         .pipe(sass())
@@ -99,9 +102,9 @@ function css() {
             suffix: ".min",
             extname: ".css"
         }))
+        .pipe(sourcemaps.write('./'))
         .pipe(dest(path.build.css))
-        .pipe(browserSync.reload({ stream: true }))
-
+        .pipe(browserSync.reload({ stream: true }));
 }
 
 function js() {
@@ -112,8 +115,12 @@ function js() {
                     title: "JS ERROR",
                     message: "Error :<% error.message %>"
                 })(err);
-                this.inherit('end');
+                this.emit('end');
             }
+        }))
+        .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ['@babel/preset-env']
         }))
         .pipe(rigger())
         .pipe(dest(path.build.js))
@@ -122,9 +129,9 @@ function js() {
             suffix: ".min",
             extname: ".js"
         }))
+        .pipe(sourcemaps.write('.'))
         .pipe(dest(path.build.js))
-        .pipe(browserSync.reload({ stream: true }))
-
+        .pipe(browserSync.reload({ stream: true }));
 }
 
 function images() {

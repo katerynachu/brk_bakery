@@ -57,3 +57,24 @@
 
     }
 }
+.timeline{
+    max-width: 370px;
+    margin: 0 auto;
+}
+.slick-prev.slick-arrow{
+    position: absolute;
+    left: -50px;
+    transform: rotate(90deg);
+    top: 0;
+    background-color: black;
+    color: red;
+}
+.slick-next.slick-arrow{
+    position: absolute;
+    left: -50px;
+    bottom: 0;
+    background-color: black;
+    color: red;
+    transform: rotate(90deg);
+
+}

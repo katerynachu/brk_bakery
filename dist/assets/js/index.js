@@ -14,7 +14,7 @@ burgerMenu.addEventListener('click', function () {
 addEventListener('DOMContentLoaded', (event) => {
 
   $('.about-us-slider').slick({
-      dots: true,
+      dots: false,
       infinite: true,
       vertical: true,
       // autoplay: true,

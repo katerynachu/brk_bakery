@@ -726,24 +726,49 @@ img {
 }
 
 .timeline {
+    padding: 50px 0;
     max-width: 370px;
     margin: 0 auto;
 }
 
-.slick-prev.slick-arrow {
+.slick-prev.slick-arrow,
+.slick-next.slick-arrow {
     position: absolute;
-    left: -50px;
-    transform: rotate(90deg);
-    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
     background-color: black;
-    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-prev.slick-arrow {
+    left: -60px;
+    top: -15px;
 }
 
 .slick-next.slick-arrow {
-    position: absolute;
-    left: -50px;
+    left: -60px;
     bottom: 0;
-    background-color: black;
-    color: red;
-    transform: rotate(90deg);
+}
+
+.slick-next.slick-arrow::before {
+    transform: rotate(180deg);
+}
+
+.slick-next.slick-arrow::before, .slick-prev.slick-arrow::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    background-image: url("../../assets/images/arrow.png");
+}
+
+.slick-next {
+    top: 60%;
 }
